@@ -1,5 +1,7 @@
 package exercicioReservation;
 
+import exercicioReservation.models.exceptions.DomainException;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -9,14 +11,24 @@ public class Reservation {
     private int roomNumber;
     Date checkinDate,checkoutDate;
 
-    public Reservation(int roomNumber, Date checkinDate, Date checkoutDate){
+    public Reservation(int roomNumber, Date checkinDate, Date checkoutDate) throws DomainException {
         this.roomNumber = roomNumber;
         this.checkinDate = checkinDate;
         this.checkoutDate = checkoutDate;
+        Date now = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        if(!checkoutDate.after((checkinDate))){
+            throw new DomainException("Checkout must be after checkin");
+        }
+        if(checkinDate.before(now) || checkoutDate.before(now) ){
+            throw new DomainException("Dates must be futuren");
+        }
         System.out.printf("Reservation: room %d, check-in: %s. check-out: %s duration = %d\n", roomNumber, formatter.format(checkinDate), formatter.format(checkoutDate), duration());
     }
-    public String updateCheckoutDate(Date checkoutDate){
+    public void dateCheckoutDate(Date checkoutDate) throws DomainException {
+        if(this.checkoutDate.after(checkoutDate)){
+            throw new DomainException("Update chekout date must be after actual checkout date");
+        }
         this.checkoutDate = checkoutDate;
     }
 

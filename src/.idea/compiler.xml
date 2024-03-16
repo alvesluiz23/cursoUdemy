@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/heranca/SavingAccountPlus.java" />
+      <file url="file://$PROJECT_DIR$/composicao/Worker.java" />
+      <file url="file://$PROJECT_DIR$/shapeArea/Circle.java" />
+      <file url="file://$PROJECT_DIR$/shapeArea/program.java" />
+      <file url="file://$PROJECT_DIR$/composicao/Program.java" />
+      <file url="file://$PROJECT_DIR$/comportamentoArrayListMemoria/ExercicioFuncionario.java" />
+    </excludeFromCompile>
+  </component>
+</project>

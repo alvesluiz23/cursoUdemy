@@ -6,6 +6,8 @@
       <file url="file://$PROJECT_DIR$/src/heranca/SavingAccountPlus.java" />
       <file url="file://$PROJECT_DIR$/src/shapeArea/Circle.java" />
       <file url="file://$PROJECT_DIR$/src/shapeArea/program.java" />
+      <file url="file://$PROJECT_DIR$/src/composicao/Worker.java" />
+      <file url="file://$PROJECT_DIR$/src/composicao/Program.java" />
     </excludeFromCompile>
   </component>
 </project>
